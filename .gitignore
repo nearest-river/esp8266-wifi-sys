@@ -1,5 +1,5 @@
 /target
 
 
+src/bindings.rs
 *.lock
-
