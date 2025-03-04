@@ -1,0 +1,25 @@
+[package]
+name = "esp8266-wifi-sys"
+version = "0.1.0"
+edition = "2021"
+description = "Bindings to Espressif's esp8266 WiFi low-level drivers"
+
+[dependencies]
+
+[profile.dev]
+# Rust debug is too slow.
+# For debug builds always builds with some optimization
+opt-level = "s"
+
+[profile.release]
+codegen-units = 1 # LLVM can perform better optimizations using a single thread
+debug = 2
+debug-assertions = false
+incremental = false
+lto = 'fat'
+opt-level = 's'
+overflow-checks = false
+
+[build-dependencies]
+bindgen = "0.71.1"
+
