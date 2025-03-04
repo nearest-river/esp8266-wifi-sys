@@ -1,0 +1,18 @@
+This project includes third-party code from esp-wifi-sys written primarily by the ESP-RS team.
+
+However, it depends on proprietary static libraries (placed in the `libs` directory) from ESP8266_RTOS_SDK.
+Due to GPL-2.0 requirements, we cannot distribute compiled binaries including these proprietary components.
+Users must obtain the proprietary libraries separately and compile the project themselves.
+
+- Parts of esp-wifi-sys are licensed under the MIT License.
+- Parts of esp-wifi-sys are licensed under the Apache License, Version 2.0.
+
+- `headers/btbb.h` was removed
+- `include/esp_bt_cfg.h` was removed
+- `headers/esp32/esp_bt.h` was removed
+- `include/wrapper.h` was renamed from `include/include.h`
+- `headers/esp32/` was removed
+- `headers/esp8266/sdkconfig.h` was copied from `ESP8266_RTOS_SDK`
+- `headers/esp8266/phy_init_data.h` was copied from `ESP8266_RTOS_SDK`
+- `lib/*.a` were copied from `ESP8266_RTOS_SDK`
+
